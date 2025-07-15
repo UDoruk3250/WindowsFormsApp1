@@ -501,6 +501,7 @@
             this.buttonConnect.TabIndex = 22;
             this.buttonConnect.Text = "Port Aç";
             this.buttonConnect.UseVisualStyleBackColor = false;
+            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
             // 
             // buttonDisconnect
             // 

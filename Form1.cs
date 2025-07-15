@@ -68,11 +68,25 @@ namespace WindowsFormsApp1
 
         public void texteYaz(String s)
         {
-            /*
-            
-            textBoxMessages.Text = s;
             string[] data = s.Split(',');
+            takim_id.Text = data[0];
+            labelCounter.Text = data[1];
+            gps_boylam.Text = data[2];
+            gps_enlem.Text = data[3];
+            irtifa.Text = data[4];
+            J_X.Text = data[5];
+            J_Y.Text = data[6];
+            J_Z.Text = data[7];
 
+            İvme_X.Text = data[7];
+            İvme_Y.Text = data[8];
+            İvme_Z.Text = data[9];
+
+            gorev_irtifa.Text = data[10];
+            gorev_boylam.Text = data[11];
+            gorev_enlem.Text = data[12];
+
+            /*
             takimID.Text = uint.Parse(data[4], System.Globalization.NumberStyles.HexNumber).ToString();
             sayac.Text = uint.Parse(data[5], System.Globalization.NumberStyles.HexNumber).ToString();
             status.Text = uint.Parse(data[74], System.Globalization.NumberStyles.HexNumber).ToString();
@@ -96,6 +110,8 @@ namespace WindowsFormsApp1
         {
             String gelenVeri = serialPort1.ReadLine();
             //textBoxMessages.Text += gelenVeri;
+            texteYaz(gelenVeri);
         }
+
     }
 }
