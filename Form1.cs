@@ -19,6 +19,15 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        public static float HexStringToFloat(string hexString)
+        {
+            uint num = uint.Parse(hexString, System.Globalization.NumberStyles.AllowHexSpecifier);
+
+            byte[] floatVals = BitConverter.GetBytes(num);
+            float f = BitConverter.ToSingle(floatVals, 0);
+            return f;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             buttonDisconnect.Enabled = false;
@@ -96,7 +105,7 @@ namespace WindowsFormsApp1
             J_X.Text = HexStringToFloat(data[49].PadLeft(2, '0') + data[48].PadLeft(2, '0') + data[47].PadLeft(2, '0') + data[46].PadLeft(2, '0')).ToString();
             J_Y.Text = HexStringToFloat(data[53].PadLeft(2, '0') + data[52].PadLeft(2, '0') + data[51].PadLeft(2, '0') + data[50].PadLeft(2, '0')).ToString();
             J_Z.Text = HexStringToFloat(data[57].PadLeft(2, '0') + data[56].PadLeft(2, '0') + data[55].PadLeft(2, '0') + data[54].PadLeft(2, '0')).ToString();
-            İvme_X.Text = HexStringToFloat(data[6 1].PadLeft(2, '0') + data[60].PadLeft(2, '0') + data[59].PadLeft(2, '0') + data[58].PadLeft(2, '0')).ToString();
+            İvme_X.Text = HexStringToFloat(data[61].PadLeft(2, '0') + data[60].PadLeft(2, '0') + data[59].PadLeft(2, '0') + data[58].PadLeft(2, '0')).ToString();
             İvme_Y.Text = HexStringToFloat(data[65].PadLeft(2, '0') + data[64].PadLeft(2, '0') + data[63].PadLeft(2, '0') + data[62].PadLeft(2, '0')).ToString();
             İvme_Z.Text = HexStringToFloat(data[69].PadLeft(2, '0') + data[68].PadLeft(2, '0') + data[67].PadLeft(2, '0') + data[66].PadLeft(2, '0')).ToString();
             gorev_irtifa.Text = HexStringToFloat(data[25].PadLeft(2, '0') + data[24].PadLeft(2, '0') + data[23].PadLeft(2, '0') + data[22].PadLeft(2, '0')).ToString();

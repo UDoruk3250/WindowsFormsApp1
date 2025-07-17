@@ -257,10 +257,13 @@
             // 
             // textBoxMessages
             // 
-            this.textBoxMessages.Location = new System.Drawing.Point(451, 38);
+            this.textBoxMessages.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textBoxMessages.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBoxMessages.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxMessages.Location = new System.Drawing.Point(373, 106);
             this.textBoxMessages.Multiline = true;
             this.textBoxMessages.Name = "textBoxMessages";
-            this.textBoxMessages.Size = new System.Drawing.Size(10, 20);
+            this.textBoxMessages.Size = new System.Drawing.Size(615, 213);
             this.textBoxMessages.TabIndex = 2;
             // 
             // comboBox1
@@ -269,12 +272,15 @@
             this.comboBox1.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "deneme"});
             this.comboBox1.Location = new System.Drawing.Point(1020, 365);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(273, 47);
             this.comboBox1.TabIndex = 16;
+            // 
+            // serialPort1
+            //
+
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // groupBox1
             // 
