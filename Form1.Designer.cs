@@ -46,6 +46,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.textBoxMessages = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gps_boylam = new System.Windows.Forms.Label();
@@ -253,6 +254,14 @@
             this.label15.Size = new System.Drawing.Size(115, 39);
             this.label15.TabIndex = 14;
             this.label15.Text = "İvme  Y:";
+            // 
+            // textBoxMessages
+            // 
+            this.textBoxMessages.Location = new System.Drawing.Point(451, 38);
+            this.textBoxMessages.Multiline = true;
+            this.textBoxMessages.Name = "textBoxMessages";
+            this.textBoxMessages.Size = new System.Drawing.Size(10, 20);
+            this.textBoxMessages.TabIndex = 2;
             // 
             // comboBox1
             // 
@@ -570,6 +579,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.irtifa);
+            this.Controls.Add(this.textBoxMessages);
             this.Controls.Add(this.paket_sayaci);
             this.Controls.Add(this.takim_id);
             this.Controls.Add(this.labelTitle);
@@ -608,6 +618,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBoxMessages;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
